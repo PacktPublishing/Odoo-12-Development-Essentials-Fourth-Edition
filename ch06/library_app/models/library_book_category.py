@@ -10,7 +10,7 @@ class BookCategory(models.Model):
     # Hierarchy fields
     parent_id = fields.Many2one(
         'library.book.category',
-        name='Parent Category',
+        string='Parent Category',
         ondelete='restrict',
     )
     parent_path = fields.Char(index=True)
@@ -19,7 +19,7 @@ class BookCategory(models.Model):
     child_ids = fields.One2many(
         'library.book.category',
         'parent_id',
-        name='Subcategories',
+        string='Subcategories',
     )
 
     highlighted_id = fields.Reference(

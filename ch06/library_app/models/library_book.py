@@ -71,7 +71,7 @@ class Book(models.Model):
                     '%s is an invalid ISBN' % book.isbn)
         return True
 
-    category_id = fields.Many2one('library.book.category', name='Category')
+    category_id = fields.Many2one('library.book.category', string='Category')
 
     publisher_country_id = fields.Many2one(
         'res.country',
@@ -86,9 +86,11 @@ class Book(models.Model):
         for book in self:
             book.publisher_country_id = book.publisher_id.country_id
 
+    @api.depends('publisher_country_id')
     def _inverse_publisher_country(self):
         for book in self:
-            book.publisher_id.country_id = book.publisher_country_id
+            if book.publisher_id:
+                book.publisher_id.country_id = book.publisher_country_id
 
     def _search_publisher_country(self, operator, value):
         return [('publisher_id.country_id', operator, value)]
