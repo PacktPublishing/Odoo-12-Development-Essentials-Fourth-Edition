@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<odoo>
+
+  <!-- Add Kanban view -->
+  <record id="library_checkout_kanban" model="ir.ui.view">
+    <field name="model">library.checkout</field>
+    <field name="arch" type="xml">
+
+<kanban default_group_by="stage_id" class="o_kanban_small_column" >
+
+  <!-- Fields (to use in expressions)... -->
+  <field name="id" />
+  <field name="stage_id" />
+  <field name="color" />
+  <field name="kanban_state" />
+  <field name="priority" />
+  <field name="message_partner_ids" />
+
+  <!-- Optional progress bar  -->
+  <progressbar
+      field="kanban_state"
+      colors='{"done": "success", "blocked": "danger"}' />
+
+  <!-- Templates with HTML snippets to use... -->
+  <templates>
+    <t t-name="kanban-box">
+      <!-- HTML QWeb template... -->
+
+  <!-- Set the Kanban Card color: -->
+  <div t-attf-class="
+    oe_kanban_color_#{kanban_getcolor(record.color.raw_value)}
+    oe_kanban_global_click">
+
+      <div class="o_dropdown_kanban dropdown">
+          <!-- Top-right drop down menu here... -->
+          <a class="dropdown-toggle btn"
+             data-toggle="dropdown" role="button"
+            aria-label="Dropdown menu"
+            title="Dropdown menu"
+             href="#">
+            <span class="fa fa-ellipsis-v"/>
+          </a>
+          <div class="dropdown-menu" role="menu">
+            <!-- Edit and Delete actions, if available: -->
+            <t t-if="widget.editable">
+              <a role="menuitem" type="edit" class="dropdown-item">Edit</a>
+            </t>
+            <t t-if="widget.deletable">
+              <a role="menuitem" type="delete" class="dropdown-item">Delete</a>
+            </t>
+            <!-- Color picker option: -->
+            <ul class="oe_kanban_colorpicker" data-field="color"/>
+          </div>
+
+      </div>
+
+      <div class="oe_kanban_body">
+         <!-- Content elements and fields go here... -->
+
+        <div>
+            <strong>
+            <a type="open"><field name="member_id" /></a>
+            </strong>
+        </div>
+        <ul>
+            <li><field name="user_id" /></li>
+            <li><field name="request_date" /></li>
+        </ul>
+
+      </div>
+      <div class="oe_kanban_footer">
+        <div class="oe_kanban_footer_left">
+            <!-- Left hand footer... -->
+            <field name="priority" widget="priority"/>
+            <field name="activity_ids" widget="kanban_activity"/>
+        </div>
+        <div class="oe_kanban_footer_right">
+            <!-- Right hand footer... -->
+            <field name="kanban_state" widget="kanban_state_selection"/>
+            <img t-att-src="kanban_image(
+              'library.checkout', 'member_image', record.id.raw_value)"
+              t-att-title="record.member_id.value"
+              t-att-alt="record.member_id.display_name.value"
+              width="24" height="24"
+              class="oe_kanban_avatar" />
+        </div>
+      </div>
+      <div class="oe_clear"/>
+  </div> <!-- end of kanban color -->
+
+    </t>
+  </templates>
+
+      </kanban>
+
+    </field>
+  </record>
+</odoo>
