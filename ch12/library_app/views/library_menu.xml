@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<odoo>
+    <menuitem id="library_menu"
+              name="Library" />
+
+    <act_window id="action_library_book"
+      name="Library Books"
+      res_model="library.book"
+      view_mode="tree,form"
+    />
+
+    <menuitem id="menu_library_book"
+              name="Book"
+              action="action_library_book"
+              parent="library_menu" />
+    />
+
+    <act_window id="action_library_categ"
+      name="Categories"
+      res_model="library.book.category"
+      view_mode="tree,form"
+    />
+
+    <menuitem id="menu_library_categ"
+              name="Categories"
+              action="action_library_categ"
+              parent="library_menu" />
+    />
+
+</odoo>
