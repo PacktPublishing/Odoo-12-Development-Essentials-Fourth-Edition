@@ -16,7 +16,7 @@ class LibraryAPI():
     def search_read(self, text=None):
         domain = [('name','ilike', text)] if text else []
         fields = ['id', 'name']
-        return self.Client.read(self.model, domain, fields)
+        return self.Client.search_read(self.model, domain, fields)
 
     def create(self, title):
         vals = {'name': title}
