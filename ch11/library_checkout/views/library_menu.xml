@@ -4,7 +4,7 @@
     <act_window id="action_library_checkout"
       name="Checkouts"
       res_model="library.checkout"
-      view_mode="tree,form,activity,calendar,graph,pivot"
+      view_mode="kanban,tree,form,activity,calendar,graph,pivot"
     />
 
     <menuitem id="menu_library_checkout"

@@ -5,6 +5,7 @@ class Checkout(models.Model):
     _name = 'library.checkout'
     _description = 'Checkout Request'
     _inherit = ['mail.thread', 'mail.activity.mixin']
+    _rec_name = 'request_date'
 
     @api.multi
     def name_get(self):
@@ -94,11 +95,12 @@ class Checkout(models.Model):
         compute='_compute_num_other_checkouts')
 
     def _compute_num_other_checkouts(self):
-        domain = [
-            ('member_id', '=', self.member_id.id),
-            ('state', 'in', ['open']),
-            ('id', '!=', self.id)]
-        return self.search_count(domain)
+        for rec in self:
+            domain = [
+                ('member_id', '=', rec.member_id.id),
+                ('state', 'in', ['open']),
+                ('id', '!=', rec.id)]
+            rec.num_other_checkouts = self.search_count(domain)
 
     num_books = fields.Integer(
         compute='_compute_num_books',
@@ -117,6 +119,21 @@ class Checkout(models.Model):
         for checkout in self:
             checkout.stage_id = done_stage
         return True
+
+    # Ch 11 - Kanban views
+    color = fields.Integer('Color Index')
+    priority = fields.Selection(
+        [('0', 'Low'),
+         ('1', 'Normal'),
+         ('2', 'High')],
+        'Priority',
+        default='1')
+    kanban_state = fields.Selection(
+        [('normal', 'In Progress'),
+         ('blocked', 'Blocked'),
+         ('done', 'Ready for next stage')],
+        'Kanban State',
+        default='normal')
 
 
 class CheckoutLine(models.Model):
