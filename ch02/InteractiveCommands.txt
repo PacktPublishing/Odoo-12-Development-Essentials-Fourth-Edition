@@ -1,0 +1,24 @@
+# Managing Odoo databases
+~/odoo-dev/odoo/odoo-bin -d testdb
+createdb MyDB
+createdb --template=MyDB MyDB2
+psql -l
+dropdb MyDB2
+
+# More server configuration options
+~/odoo-dev/odoo/odoo-bin --help
+~/odoo-dev/odoo/odoo-bin --save --stop-after-init
+more ~/.odoorc
+
+~/odoo-dev/odoo/odoo-bin --http-port=8070
+~/odoo-dev/odoo/odoo-bin --http-port=8071
+~/odoo-dev/odoo/odoo-bin --db-filter=^testdb$
+
+# Installing additional modules
+cd ~/odoo-dev
+git clone https://github.com/PacktPublishing/Odoo-12-Development-Essentials-Fourth-Edition.git library
+
+cd ~/odoo-dev/odoo
+./odoo-bin -d 12-library --addons-path="../library,./addons"
+
+sudo apt-get install python3-watchdog
