@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <act_window id="action_library_member"
+      name="Library Members"
+      res_model="library.member"
+      view_mode="tree,form" />
+
+    <menuitem id="menu_library_member"
+      name="Members"
+      action="action_library_member"
+      parent="library_app.library_menu" />
+
+</odoo>
