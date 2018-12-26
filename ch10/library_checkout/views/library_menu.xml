@@ -4,14 +4,14 @@
     <act_window id="action_library_checkout"
       name="Checkouts"
       res_model="library.checkout"
-      view_mode="tree,form"
+      view_mode="tree,form,activity,calendar,graph,pivot"
     />
 
     <menuitem id="menu_library_checkout"
               name="Checkout"
               action="action_library_checkout"
               parent="library_app.library_menu" />
-    />
+
 
     <act_window id="action_library_stage"
       name="Checkout Stages"
