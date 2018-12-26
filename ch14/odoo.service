@@ -1,0 +1,12 @@
+[Unit] 
+Description=Odoo 
+After=postgresql.service 
+ 
+[Service] 
+Type=simple 
+User=odoo 
+Group=odoo 
+ExecStart=/home/odoo/odoo-12/odoo-bin -c /etc/odoo/odoo.conf 
+ 
+[Install] 
+WantedBy=multi-user.target 
