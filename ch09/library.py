@@ -8,11 +8,11 @@ from library_odoorpc import LibraryAPI
 parser = ArgumentParser()
 parser.add_argument(
     'command',
-    choices=['list', 'add', 'set', 'del'])
+    choices=['list', 'add', 'set-title', 'del'])
 parser.add_argument('params', nargs='*')
 args = parser.parse_args()
 
-srv, port, db = 'localhost', 8069, '12-library'
+srv, port, db = 'localhost', 8092, '12-library09'
 user, pwd = 'admin', 'admin'
 api = LibraryAPI(srv, port, db, user, pwd)
 
