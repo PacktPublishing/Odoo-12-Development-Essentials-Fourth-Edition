@@ -61,9 +61,6 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 
 * Go to Bing homepage [[Packt]](NetSuite ERP for Administrators?utm_source=github&utm_medium=repository&utm_campaign=) [[Amazon]](https://www.amazon.com/dp/178862887X)
 
-*  [[Packt]]() [[Amazon]](https://www.amazon.com/dp/)
-
-*  [[Packt]]() [[Amazon]](https://www.amazon.com/dp/)
 
 ## Get to Know the Author
 **Daniel Reis**
@@ -71,17 +68,6 @@ has had a long career in the IT industry, most as a consultant implementing busi
 
 He has been working with Odoo (formerly OpenERP) since 2010, is an active contributor to the Odoo Community Association projects, is currently a member of the board of the Odoo Community Association, and collaborates with ThinkOpen Solutions, a leading Portuguese Odoo integrator.
 
-****
-0
-
-****
-0
-
-****
-0
-
-****
-0
 
 ## Other books by the author
 [Odoo Development Essentials](https://www.packtpub.com/big-data-and-business-intelligence/odoo-development-essentials?utm_source=github&utm_medium=repository&utm_campaign=9781784392796 )
