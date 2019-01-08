@@ -54,7 +54,7 @@ With the following software and hardware list you can run all code files present
 | 2-14 | Windows 10, with the Ubuntu 18.05 WSL app. | Windows and Linux (Ubuntu) |
 
 
-We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it]( https://www.packtpub.com/sites/default/files/downloads/9781789532470_ColorImages.pdf.).
+We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it]( https://www.packtpub.com/sites/default/files/downloads/9781789532470_ColorImages.pdf).
 
 ### Related products
 * Go to Bing homepage [[Packt]](Dynamics 365 Business Central Development Quick Start Guide?utm_source=github&utm_medium=repository&utm_campaign=) [[Amazon]](https://www.amazon.com/dp/1789347467)
