@@ -9,7 +9,7 @@
     - Field Label: `Is Work Team?`
     - Field Type:  `boolean`
 
-### iAdding a field to a form view
+### Adding a field to a form view
 
   - Menu Contacts --> Form View --> Debug menu | Edit Form View
   - "Inherited Views" tab --> Add an Item --> Create:
@@ -125,4 +125,4 @@ Menu: `Settings | Technical | Security | Record Rules`, click `Create`:
     - Click on the To-do menu option to go to the To-do list.
     - Click on the Developer Tools icon and select the Edit Action option.
     - In the lower-right corner, Filter section:
-        - Set "Contexti" to: {'search_default_item_not_done': True}
+        - Set "Context" to: {'search_default_item_not_done': True}
