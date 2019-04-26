@@ -1,6 +1,6 @@
 # Odoo 12 Development Essentials - Fourth Edition
 
-<a href="https://www.packtpub.com/business/odoo-12-development-essentials-fourth-edition?utm_source=github&utm_medium=repository&utm_campaign=9781789532470 "><img src="https://dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/B11829.png" alt="Odoo 12 Development Essentials - Fourth Edition" height="256px" align="right"></a>
+<a href="https://www.packtpub.com/business/odoo-12-development-essentials-fourth-edition?utm_source=github&utm_medium=repository&utm_campaign=9781789532470 "><img src="https://www.packtpub.com/sites/default/files/B11829_0.png" alt="Odoo 12 Development Essentials - Fourth Edition" height="256px" align="right"></a>
 
 This is the code repository for [Odoo 12 Development Essentials - Fourth Edition](https://www.packtpub.com/business/odoo-12-development-essentials-fourth-edition?utm_source=github&utm_medium=repository&utm_campaign=9781789532470 ), published by Packt.
 
