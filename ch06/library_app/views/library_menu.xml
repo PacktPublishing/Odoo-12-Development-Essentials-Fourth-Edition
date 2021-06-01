@@ -12,7 +12,7 @@
     <menuitem id="menu_library_book"
               name="Book"
               action="action_library_book"
-              parent="library_menu" />
+              parent="library_menu" 
     />
 
     <act_window id="action_library_categ"
@@ -24,7 +24,7 @@
     <menuitem id="menu_library_categ"
               name="Categories"
               action="action_library_categ"
-              parent="library_menu" />
+              parent="library_menu" 
     />
 
 </odoo>
